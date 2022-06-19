@@ -22,8 +22,8 @@ class BMI:
     """docstring for ClassName."""
 
     def __init__(self, height, weight):
-        self.height = height
-        self.weight = weight
+        self.height = float(height)
+        self.weight = float(weight)
         self.value = self.weight / (self.height**2)
 
         # 10以上40以下のチェック
@@ -33,12 +33,12 @@ class BMI:
     def __str__(self):
         # return = f"{self.value:.2f}"
         #  基準値(18.5~25)の確認
-        if (18 <= self.value <=25):
-            return (f"{self.value:.2f} : (普通体重)")
-        if (self.value <=18 ):
-            return (f"{self.value:.2f} : (低体重)")
-        if (25 <= self.value):
-            return (f"{self.value:.2f} : (肥満)")
+        if 18 <= self.value <= 25:
+            return f"{self.value:.2f} : (普通体重)"
+        if self.value <= 18:
+            return f"{self.value:.2f} : (低体重)"
+        if 25 <= self.value:
+            return f"{self.value:.2f} : (肥満)"
         # if ( self.value < 18.5 or 25 < self.value ):
         # return("正常値を外れます")
 
@@ -47,16 +47,16 @@ class BMI:
     # return self.weight/(self.height ** 2)
 
 
-tanaka_bmi = BMI(height=1.80, weight=67.0)
-sasami_bmi = BMI(height=1.58, weight=80.0)
-chie_bmi = BMI(height=1.65, weight=49.0)
+# tanaka_bmi = BMI(height=1.80, weight=67.0)
+# sasami_bmi = BMI(height=1.58, weight=80.0)
+someone_bmi = BMI(height=input("身長(m) : "), weight=input("体重(kg) : "))
 # 入力に対してBMIを出力
 
 # tanaka_bmiの身長を出力
-print(tanaka_bmi.height)
+print(someone_bmi.height)
 
 # BMI出力
 # print(tanaka_bmi.calculate_bmi())
 # print(tanaka_bmi.value)
-print(tanaka_bmi)  # 20.ggggg
-print(sasami_bmi)
+print(someone_bmi)  # 20.ggggg
+# print(sasami_bmi)
