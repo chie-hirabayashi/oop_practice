@@ -24,10 +24,11 @@ class BMI:
     def __init__(self, height, weight):
         self.height = height
         self.weight = weight
-    
-    def calculate_bmi(self):
-        # BMI = 体重÷身長^2
-        return self.weight/(self.height ** 2)
+        self.value = self.weight / (self.height**2)
+
+    # def calculate_bmi(self):
+    # BMI = 体重÷身長^2
+    # return self.weight/(self.height ** 2)
 
 
 tanaka_bmi = BMI(height=1.80, weight=67.0)
@@ -37,4 +38,5 @@ sasami_bmi = BMI(height=1.58, weight=80.0)
 print(tanaka_bmi.height)
 
 # BMI出力
-print(tanaka_bmi.calculate_bmi())
+# print(tanaka_bmi.calculate_bmi())
+print(tanaka_bmi.value)
